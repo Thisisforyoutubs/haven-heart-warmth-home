@@ -4,51 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heart to Home Haven</title>
-    <meta name="description" content="Your cozy digital haven" />
-    <meta name="author" content="Heart to Home Haven" />
-    
-    <meta property="og:title" content="Heart to Home Haven" />
-    <meta property="og:description" content="Your cozy digital haven" />
-    <meta property="og:type" content="website" />
-    
+    <title>Heart Haven - Your Safe Space</title>
+    <meta name="description" content="A personal emotional support space filled with love and comfort" />
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <main class="main-content">
-            <div class="welcome-section">
-                <h1 class="title">Welcome to Heart to Home Haven</h1>
-                <p class="subtitle">Your cozy digital space where heart meets home</p>
-                <button class="cta-button" onclick="showMessage()">Get Started</button>
+    <div class="app-container">
+        <!-- Welcome Screen -->
+        <div class="screen welcome-screen active" id="welcomeScreen">
+            <div class="welcome-content">
+                <div class="app-logo">
+                    <div class="heart-icon">💕</div>
+                    <h1 class="app-title">Heart Haven</h1>
+                    <p class="app-subtitle">Your safe emotional retreat</p>
+                </div>
+                <button class="primary-button" onclick="showMoodSelection()">
+                    How are you feeling today?
+                </button>
+            </div>
+        </div>
+
+        <!-- Mood Selection Screen -->
+        <div class="screen mood-screen" id="moodScreen">
+            <div class="screen-header">
+                <button class="back-button" onclick="showWelcome()">← Back</button>
+                <h2>How are you feeling?</h2>
+                <p class="helper-text">Take your time, there's no rush ✨</p>
             </div>
             
-            <div class="features-section">
-                <div class="feature-card">
-                    <h3>🏠 Cozy Atmosphere</h3>
-                    <p>Experience the warmth and comfort of home in our digital space</p>
-                </div>
-                <div class="feature-card">
-                    <h3>💖 Heartfelt Connection</h3>
-                    <p>Connect with others who share your love for creating a beautiful home</p>
-                </div>
-                <div class="feature-card">
-                    <h3>🌟 Inspiring Ideas</h3>
-                    <p>Discover creative ways to make your space more inviting and personal</p>
-                </div>
+            <div class="mood-grid">
+                <button class="mood-card" onclick="showLetter('sad')" data-mood="sad">
+                    <div class="mood-emoji">😢</div>
+                    <span class="mood-label">Sad</span>
+                </button>
+                <button class="mood-card" onclick="showLetter('scared')" data-mood="scared">
+                    <div class="mood-emoji">😰</div>
+                    <span class="mood-label">Scared</span>
+                </button>
+                <button class="mood-card" onclick="showLetter('insecure')" data-mood="insecure">
+                    <div class="mood-emoji">😔</div>
+                    <span class="mood-label">Insecure</span>
+                </button>
+                <button class="mood-card" onclick="showLetter('lonely')" data-mood="lonely">
+                    <div class="mood-emoji">🥺</div>
+                    <span class="mood-label">Lonely</span>
+                </button>
+                <button class="mood-card" onclick="showLetter('overwhelmed')" data-mood="overwhelmed">
+                    <div class="mood-emoji">😵‍💫</div>
+                    <span class="mood-label">Overwhelmed</span>
+                </button>
+                <button class="mood-card" onclick="showLetter('anxious')" data-mood="anxious">
+                    <div class="mood-emoji">😟</div>
+                    <span class="mood-label">Anxious</span>
+                </button>
+            </div>
+
+            <div class="bottom-actions">
+                <button class="memory-button" onclick="showMemoryGallery()">
+                    <span class="button-icon">📸</span>
+                    Visit Memory Gallery
+                </button>
+            </div>
+        </div>
+
+        <!-- Letter Screen -->
+        <div class="screen letter-screen" id="letterScreen">
+            <div class="screen-header">
+                <button class="back-button" onclick="showMoodSelection()">← Back</button>
             </div>
             
-            <div class="message-area" id="messageArea" style="display: none;">
-                <p class="message">Welcome to your haven! We're so glad you're here.</p>
+            <div class="letter-content">
+                <div class="letter-image" id="letterImage"></div>
+                <div class="letter-card">
+                    <div class="letter-header">
+                        <h3>A message just for you 💝</h3>
+                    </div>
+                    <div class="letter-body" id="letterBody">
+                        <!-- Letter content will be inserted here -->
+                    </div>
+                    <div class="letter-signature">
+                        With all my love,<br>
+                        <em>Your best friend 💕</em>
+                    </div>
+                </div>
             </div>
-        </main>
-        
-        <footer class="footer">
-            <p>&copy; 2024 Heart to Home Haven. Made with ❤️</p>
-        </footer>
+
+            <div class="bottom-actions">
+                <button class="memory-button" onclick="showMemoryGallery()">
+                    <span class="button-icon">📸</span>
+                    Visit Memory Gallery
+                </button>
+            </div>
+        </div>
+
+        <!-- Memory Gallery Screen -->
+        <div class="screen gallery-screen" id="galleryScreen">
+            <div class="screen-header">
+                <button class="back-button" onclick="showMoodSelection()">← Back</button>
+                <h2>Our Memory Gallery</h2>
+                <p class="helper-text">Beautiful moments we've shared together ✨</p>
+            </div>
+            
+            <div class="memory-grid">
+                <div class="memory-card">
+                    <div class="memory-image placeholder-image">🌸</div>
+                    <div class="memory-caption">
+                        <h4>That time we laughed until we cried</h4>
+                        <p>Remember when we couldn't stop giggling about the silliest thing? Your laugh is my favorite sound in the world.</p>
+                    </div>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-image placeholder-image">🌟</div>
+                    <div class="memory-caption">
+                        <h4>Our late night deep talks</h4>
+                        <p>Those 3am conversations where we solved the world's problems and shared our deepest dreams. You inspire me every day.</p>
+                    </div>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-image placeholder-image">🦋</div>
+                    <div class="memory-caption">
+                        <h4>Your incredible strength</h4>
+                        <p>Watching you overcome challenges with such grace reminds me why you're such an amazing person. You're stronger than you know.</p>
+                    </div>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-image placeholder-image">🌙</div>
+                    <div class="memory-caption">
+                        <h4>Inside joke central</h4>
+                        <p>"That's what she said!" - and we both burst into laughter. Our inside jokes make even the hardest days brighter.</p>
+                    </div>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-image placeholder-image">☀️</div>
+                    <div class="memory-caption">
+                        <h4>Your beautiful heart</h4>
+                        <p>The way you care for everyone around you, your kindness, your empathy - you make the world a better place just by being you.</p>
+                    </div>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-image placeholder-image">💫</div>
+                    <div class="memory-caption">
+                        <h4>Always here for you</h4>
+                        <p>No matter where life takes us, no matter how far apart we are, you will always have a friend who believes in you completely.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
