@@ -1,73 +1,86 @@
-# Welcome to your Lovable project
 
-## Project info
+# Heart to Home Haven
 
-**URL**: https://lovable.dev/projects/2681c1a1-2071-4355-9add-19b88cbc1022
+A beautiful web application built with React, TypeScript, and Tailwind CSS.
 
-## How can I edit this code?
+## 🚀 Live Demo
 
-There are several ways of editing your application.
+Visit the live application: [Heart to Home Haven](https://thisisforyoutubs.github.io/heart-to-home-haven/)
 
-**Use Lovable**
+## 🛠️ Development
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2681c1a1-2071-4355-9add-19b88cbc1022) and start prompting.
+This project uses:
+- **React 18** with TypeScript
+- **Vite** for fast development and building
+- **Tailwind CSS** for styling
+- **shadcn/ui** for components
+- **React Router** for navigation
+- **Tanstack Query** for data fetching
 
-Changes made via Lovable will be committed automatically to this repo.
+### Getting Started
 
-**Use your preferred IDE**
+1. Clone the repository:
+```bash
+git clone https://github.com/Thisisforyoutubs/heart-to-home-haven.git
+cd heart-to-home-haven
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. Install dependencies:
+```bash
+npm install
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:8080](http://localhost:8080) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Building for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🚀 Deployment
 
-## What technologies are used for this project?
+This project is automatically deployed to GitHub Pages using GitHub Actions. Every push to the `main` branch triggers a new deployment.
 
-This project is built with:
+### Manual Deployment Setup
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+If you want to set this up for your own repository:
 
-## How can I deploy this project?
+1. Go to your GitHub repository settings
+2. Navigate to "Pages" in the sidebar
+3. Under "Source", select "GitHub Actions"
+4. The workflow in `.github/workflows/deploy.yml` will handle the rest
 
-Simply open [Lovable](https://lovable.dev/projects/2681c1a1-2071-4355-9add-19b88cbc1022) and click on Share -> Publish.
+### Local Preview of Production Build
 
-## Can I connect a custom domain to my Lovable project?
+```bash
+npm run preview
+```
 
-Yes, you can!
+## 🔧 Project Structure
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```
+src/
+├── components/          # Reusable UI components
+├── pages/              # Page components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── main.tsx            # Application entry point
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Open a pull request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
