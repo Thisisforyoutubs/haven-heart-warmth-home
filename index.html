@@ -1,24 +1,54 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>haven-heart-warmth-home</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <meta property="og:title" content="haven-heart-warmth-home" />
-    <meta property="og:description" content="Lovable Generated Project" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart to Home Haven</title>
+    <meta name="description" content="Your cozy digital haven" />
+    <meta name="author" content="Heart to Home Haven" />
+    
+    <meta property="og:title" content="Heart to Home Haven" />
+    <meta property="og:description" content="Your cozy digital haven" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
-
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <main class="main-content">
+            <div class="welcome-section">
+                <h1 class="title">Welcome to Heart to Home Haven</h1>
+                <p class="subtitle">Your cozy digital space where heart meets home</p>
+                <button class="cta-button" onclick="showMessage()">Get Started</button>
+            </div>
+            
+            <div class="features-section">
+                <div class="feature-card">
+                    <h3>🏠 Cozy Atmosphere</h3>
+                    <p>Experience the warmth and comfort of home in our digital space</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💖 Heartfelt Connection</h3>
+                    <p>Connect with others who share your love for creating a beautiful home</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌟 Inspiring Ideas</h3>
+                    <p>Discover creative ways to make your space more inviting and personal</p>
+                </div>
+            </div>
+            
+            <div class="message-area" id="messageArea" style="display: none;">
+                <p class="message">Welcome to your haven! We're so glad you're here.</p>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2024 Heart to Home Haven. Made with ❤️</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
 </html>
